@@ -5,6 +5,6 @@
     <Project Path="src/AzureMessageProcessing.Shared/AzureMessageProcessing.Shared.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="test/AzureMessageProcessing.Tests/AzureMessageProcessing.Tests.csproj" />
+    <Project Path="test/AzureMessageProcessing.Tests.csproj" />
   </Folder>
 </Solution>

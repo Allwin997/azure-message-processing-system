@@ -1,0 +1,6 @@
+@AzureMessageProcessing.Shared_HostAddress = http://localhost:5140
+
+GET {{AzureMessageProcessing.Shared_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

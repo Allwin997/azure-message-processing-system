@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AzureMessageProcessing.Api/AzureMessageProcessing.Api.csproj" />
+    <Project Path="src/AzureMessageProcessing.Function/AzureMessageProcessing.Function.csproj" />
+    <Project Path="src/AzureMessageProcessing.Shared/AzureMessageProcessing.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="test/AzureMessageProcessing.Tests/AzureMessageProcessing.Tests.csproj" />
+  </Folder>
+</Solution>

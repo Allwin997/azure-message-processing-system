@@ -1,4 +1,5 @@
-﻿using AzureMessageProcessing.Shared.Models;
+﻿using AzureMessageProcessing.Shared.Interfaces;
+using AzureMessageProcessing.Shared.Models;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,10 +14,12 @@ namespace AzureMessageProcessing.Function.Functions
     public class OrderProcessorFunction
     {
         private readonly ILogger<OrderProcessorFunction> _logger;
+        private readonly IBlobStorageService _blobStorageService;
 
-        public OrderProcessorFunction(ILogger<OrderProcessorFunction> logger)
+        public OrderProcessorFunction(ILogger<OrderProcessorFunction> logger, IBlobStorageService blobStorageService)
         {
             _logger = logger;
+            _blobStorageService = blobStorageService;
         }
 
         [Function("OrderProcessorFunction")]
@@ -39,9 +42,11 @@ namespace AzureMessageProcessing.Function.Functions
                 order.OrderId,
                 order.CustomerName);
 
-            // Blob Storage implementation will be added in the next phase.
+            await _blobStorageService.UploadAsync(order);
 
-            await Task.CompletedTask;
+            _logger.LogInformation(
+                "Order {OrderId} uploaded to Blob Storage.",
+                order.OrderId);
         }
     }
 }

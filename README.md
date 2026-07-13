@@ -114,7 +114,6 @@ Update your local configuration with:
 }
 ```
 
-> **Note:** Do not commit secrets to GitHub. Use **User Secrets** or **Azure Key Vault**.
 
 ---
 

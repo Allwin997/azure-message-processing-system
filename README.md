@@ -12,7 +12,7 @@ A cloud-based message processing solution built using **ASP.NET Core**, **Azure 
 - Asynchronous message processing
 - Structured logging
 - Shared project for reusable models and contracts
-- NUnit test project (in progress)
+- NUnit test project 
 
 ## 🛠️ Technology Stack
 
@@ -27,8 +27,8 @@ A cloud-based message processing solution built using **ASP.NET Core**, **Azure 
 | Dependency Injection | Service Registration |
 | NUnit | Unit Testing |
 | Moq | Mocking Dependencies |
-| FluentValidation | Request Validation (Upcoming) |
-| Application Insights | Monitoring (Upcoming) |
+| FluentValidation | Request Validation |
+| Application Insights | Monitoring  |
 
 ---
 
